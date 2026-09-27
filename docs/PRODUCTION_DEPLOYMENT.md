@@ -40,7 +40,7 @@ ALLOWED_ORIGINS=https://accessguard.domain.com
 DATABASE_URL=postgresql+asyncpg://<db_user>:<db_password>@<db_host>:5432/<db_name>
 
 # Keycloak OIDC Provider Configuration
-KEYCLOAK_URL=https://auth.domain.com
+KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 KEYCLOAK_REALM=accessguard
 KEYCLOAK_CLIENT_ID=accessguard-backend
 KEYCLOAK_CLIENT_SECRET=<production-client-secret>
@@ -64,7 +64,7 @@ JWT_SECRET_KEY=<strong-32-byte-secret>
 
 ```env
 VITE_API_BASE_URL=https://api.accessguard.domain.com/api/v1
-VITE_KEYCLOAK_URL=https://auth.domain.com
+VITE_KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 VITE_KEYCLOAK_REALM=accessguard
 VITE_KEYCLOAK_CLIENT_ID=accessguard-frontend
 ```

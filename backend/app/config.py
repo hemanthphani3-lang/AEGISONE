@@ -64,7 +64,7 @@ class KeycloakConfig(BaseModel):
     """Keycloak OpenID Connect authentication configuration."""
 
     url: str = Field(
-        default_factory=lambda: os.getenv("KEYCLOAK_URL", "http://localhost:8080")
+        default_factory=lambda: os.getenv("KEYCLOAK_URL", "https://aegisone-keycloak.onrender.com")
     )
     realm: str = Field(
         default_factory=lambda: os.getenv("KEYCLOAK_REALM", "accessguard")

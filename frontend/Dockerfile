@@ -10,7 +10,7 @@ COPY . .
 
 # Environment variables for build time (VITE_* embedded in bundle)
 ARG VITE_API_BASE_URL=/api/v1
-ARG VITE_KEYCLOAK_URL=http://localhost:8080
+ARG VITE_KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 ARG VITE_KEYCLOAK_REALM=accessguard
 ARG VITE_KEYCLOAK_CLIENT_ID=accessguard-frontend
 

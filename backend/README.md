@@ -113,7 +113,7 @@ Create `.env` using `.env.example`:
 
 ```env
 APP_ENV=development
-KEYCLOAK_URL=http://localhost:8080
+KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 KEYCLOAK_REALM=accessguard
 KEYCLOAK_CLIENT_ID=accessguard-backend
 DATABASE_URL=postgresql+asyncpg://accessguard:accessguard_pass@localhost:5432/accessguard_db
@@ -145,7 +145,7 @@ Create `.env` using `.env.example`:
 
 ```env
 APP_ENV=development
-KEYCLOAK_URL=http://localhost:8080
+KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 KEYCLOAK_REALM=accessguard
 KEYCLOAK_CLIENT_ID=accessguard-backend
 DATABASE_URL=postgresql+asyncpg://accessguard:accessguard_pass@localhost:5432/accessguard_db

@@ -35,7 +35,7 @@ This guide details the target **online HTTPS architecture** for deploying **Aegi
 | :--- | :--- | :--- | :--- |
 | **React Frontend** | Vercel / Netlify | 100 GB/month bandwidth, instant global CDN, automatic SSL | `https://accessguard.vercel.app` |
 | **FastAPI Backend** | Render / Koyeb / Fly.io | 512 MB RAM, 0.1 CPU, automatic SSL, continuous Git deploys | `https://accessguard-backend.onrender.com` |
-| **Keycloak Identity** | Render / Koyeb | Docker container running `quay.io/keycloak/keycloak:24.0.1`, automatic SSL | `https://accessguard-keycloak.onrender.com` |
+| **Keycloak Identity** | Render / Koyeb | Docker container running `quay.io/keycloak/keycloak:24.0.1`, automatic SSL | `https://aegisone-keycloak.onrender.com` |
 | **Keycloak Storage** | Supabase (2nd Project) / Render Postgres | 500 MB free PostgreSQL database for Keycloak internal schema | Host connection string |
 | **Application Database**| Supabase PostgreSQL | 500 MB persistent storage, TLS encrypted | `db.yyrvzfkknrbuwcbjmaqc.supabase.co` |
 
@@ -46,7 +46,7 @@ This guide details the target **online HTTPS architecture** for deploying **Aegi
 ### A. React Frontend (Vercel / Netlify Environment Variables)
 ```ini
 VITE_API_BASE_URL=https://accessguard-backend.onrender.com/api/v1
-VITE_KEYCLOAK_URL=https://accessguard-keycloak.onrender.com
+VITE_KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 VITE_KEYCLOAK_REALM=accessguard
 VITE_KEYCLOAK_CLIENT_ID=accessguard-frontend
 ```
@@ -57,7 +57,7 @@ VITE_KEYCLOAK_CLIENT_ID=accessguard-frontend
 APP_ENV=production
 ALLOWED_ORIGINS=https://accessguard.vercel.app
 DATABASE_URL=postgresql+asyncpg://postgres.yyrvzfkknrbuwcbjmaqc:[REDACTED]@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
-KEYCLOAK_URL=https://accessguard-keycloak.onrender.com
+KEYCLOAK_URL=https://aegisone-keycloak.onrender.com
 KEYCLOAK_REALM=accessguard
 KEYCLOAK_CLIENT_ID=accessguard-backend
 KEYCLOAK_CLIENT_SECRET=[REDACTED]

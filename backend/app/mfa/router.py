@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 
 from app.auth.dependencies import get_current_user
 from app.auth.models import AuthenticatedUser
-from app.config import JWT_SECRET_KEY
+from app.config import JWT_SECRET_KEY, KEYCLOAK_REALM, KEYCLOAK_URL
 from app.mfa.models import (
     SendOTPRequest,
     SendOTPResponse,
@@ -30,7 +30,7 @@ def create_mfa_upgraded_token(user: AuthenticatedUser) -> str:
         "mfa_completed": True,
         "iat": int(now.timestamp()),
         "exp": int((now + timedelta(hours=8)).timestamp()),
-        "iss": "http://localhost:8080/realms/accessguard",
+        "iss": f"{KEYCLOAK_URL.rstrip('/')}/realms/{KEYCLOAK_REALM}",
         "aud": "accessguard-backend",
     }
     return jwt.encode(payload, JWT_SECRET_KEY, algorithm="HS256")
