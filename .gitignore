@@ -1,0 +1,39 @@
+# Environment & Secret Files (CRITICAL - DO NOT COMMIT REAL SECRETS)
+.env
+*.env
+!.env.example
+.env.local
+.env.*.local
+
+# Python / Pytest / Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+env/
+venv/
+
+# Node / Frontend Build
+node_modules/
+dist/
+build/
+.output/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Scratch & Temporary Logs
+scratch/
+*.log
+.system_generated/
+
+# OS / IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
