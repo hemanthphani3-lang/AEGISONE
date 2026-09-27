@@ -133,7 +133,7 @@ def test_policy_mutation_audit_events():
     assert client.patch(
         f"/api/v1/policies/{policy_id}",
         headers=headers,
-        json={"name": "New Name", "expected_version": 1},
+        json={"name": "New Name", "expected_version": 3},
     ).status_code == 200
 
     # 5. Delete policy -> POLICY_DELETED
