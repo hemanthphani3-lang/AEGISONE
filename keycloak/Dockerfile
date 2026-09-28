@@ -24,6 +24,10 @@ ENV KC_HEALTH_ENABLED=true
 # Single-node cache; prevents unnecessary JGroups clustering
 ENV KC_CACHE=local
 
+# Default administrative user credentials (overridden by Render environment variables if set)
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=adminpass
+
 # JVM memory tuning for Render 512 MiB instance
 ENV JAVA_OPTS_KC_HEAP="-Xms64m -Xmx192m -XX:MaxMetaspaceSize=160m -Xss512k"
 
