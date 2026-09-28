@@ -73,7 +73,7 @@ class JWTVerifier:
                 "issuer": self.issuer,
             }
             if verify_aud_flag:
-                decode_kwargs["audience"] = [self.client_id, "account"]
+                decode_kwargs["audience"] = [self.client_id, "account", "accessguard-frontend", "accessguard-backend"]
 
             payload: dict[str, Any] = jwt.decode(token, **decode_kwargs)
         except jwt.ExpiredSignatureError as exc:

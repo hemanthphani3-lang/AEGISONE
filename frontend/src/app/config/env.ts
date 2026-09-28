@@ -1,5 +1,5 @@
 export const env = {
-  apiBaseUrl: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1',
+  apiBaseUrl: import.meta.env.VITE_API_BASE_URL || 'https://aegisone-backend-goow.onrender.com/api/v1',
   keycloakUrl: import.meta.env.VITE_KEYCLOAK_URL || 'https://aegisone-keycloak.onrender.com',
   keycloakRealm: import.meta.env.VITE_KEYCLOAK_REALM || 'accessguard',
   keycloakClientId: import.meta.env.VITE_KEYCLOAK_CLIENT_ID || 'accessguard-frontend',
