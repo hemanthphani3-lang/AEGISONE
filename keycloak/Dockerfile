@@ -29,4 +29,4 @@ ENV KC_HEALTH_ENABLED=true
 ENV JAVA_OPTS_KC_HEAP="-Xms64m -Xmx192m -XX:MaxMetaspaceSize=160m"
 
 # Fast optimized startup with dynamic PORT binding for Render
-ENTRYPOINT ["/bin/sh", "-c", "export KC_HTTP_PORT=${PORT:-${KC_HTTP_PORT:-8080}} && exec /opt/keycloak/bin/kc.sh start --optimized --import-realm"]
+ENTRYPOINT ["/bin/sh", "-c", "exec /opt/keycloak/bin/kc.sh start --optimized --import-realm --http-host=0.0.0.0 --http-port=${PORT:-8080}"]
