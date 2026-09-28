@@ -37,7 +37,7 @@ class KeycloakUserService:
             "user-admin-1": {
                 "id": "user-admin-1",
                 "username": "admin01",
-                "email": "admin01@aegisone.local",
+                "email": "hemanthphani3@gmail.com",
                 "firstName": "Admin",
                 "lastName": "User",
                 "enabled": True,
