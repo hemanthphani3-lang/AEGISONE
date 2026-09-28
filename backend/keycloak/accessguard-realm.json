@@ -42,6 +42,35 @@
       "serviceAccountsEnabled": true,
       "redirectUris": ["*"],
       "webOrigins": ["*"]
+    },
+    {
+      "clientId": "accessguard-frontend",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      },
+      "redirectUris": [
+        "https://aegisone-xi.vercel.app/*",
+        "https://aegisone-xi.vercel.app/dashboard",
+        "https://aegisone-xi.vercel.app/login",
+        "https://aegisone-xi.vercel.app/auth/callback",
+        "https://aegisone-xi.vercel.app/",
+        "http://localhost:3000/*",
+        "http://localhost:3000/dashboard",
+        "http://localhost:3000/login",
+        "http://localhost:3000/auth/callback",
+        "http://localhost:5173/*"
+      ],
+      "webOrigins": [
+        "https://aegisone-xi.vercel.app",
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "+"
+      ]
     }
   ],
   "users": [
